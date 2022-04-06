@@ -82,7 +82,8 @@ aside {
 }
 
 .main-nav__item {
-  border-left: 3px solid transparent
+  border-left: 3px solid transparent;
+  margin-bottom: 10px;
 }
 
 .main-nav__item.selected {
@@ -259,8 +260,40 @@ footer {
     border: 0;
   }
 
-  .main-nav__item-link {
+  .main-nav__menu {
+    line-height: 0;
+  }
+
+  .main-nav__item-link span {
     display: none;
+  }
+
+  .side-bar__playlist {
+    display: none;
+  }
+
+  .side-bar__bottom hr {
+    visibility: hidden;
+  }
+
+  .side-bar__bottom {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .install__link span {
+    display: none;
+  }
+
+  .profile__name {
+    display: none;
+  }
+
+  .profile__avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    padding: 2px 5px;
   }
 
   main {
