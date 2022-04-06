@@ -10,24 +10,6 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-/* Debug */
-.debug .container {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.debug header {
-  background-color: burlywood;
-  filter: opacity(0.75);
-}
-
-.debug main {
-  background-color: blue;
-}
-
-.debug footer {
-  background-color: purple;
-}
-
 /* Commons */
 .container {
   display: flex;
@@ -38,6 +20,15 @@ aside, header, main, footer {
   flex-shrink: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
 /* Header */
 header {
   position: fixed;
@@ -46,6 +37,7 @@ header {
   z-index: 998;
   width: calc(100% - 300px);
   height: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Aside */
@@ -57,6 +49,7 @@ aside {
   color: #808080;
   background-color: #000;
   font-size: 1.1rem;
+  overflow: hidden;
 }
 
 .logo {
@@ -72,7 +65,6 @@ aside {
 }
 
 .main-nav__menu {
-  list-style-type: none;
   line-height: 2rem;
 }
 
@@ -88,7 +80,6 @@ aside {
 .main-nav__item-link {
   padding-left: 20px;
   padding-right: 20px;
-  text-decoration: none;
   color: inherit;
 }
 
@@ -112,12 +103,96 @@ aside {
   content: '\f080';
 }
 
+.side-bar__playlist {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+
+.side-bar__playlist-header {
+  margin-bottom: 20px;
+}
+
+.side-bar__playlist-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.side-bar__playlist-link {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.side-bar__playlist-link::before {
+  content: '\f0fe';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-right: 10px;
+  font-size: 3rem;
+  vertical-align: middle;
+}
+
+.side-bar__playlist-body {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.side-bar__playlist-item {
+  line-height: 2.35rem;
+}
+
+.side-bar__bottom {
+  margin-top: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.side-bar__bottom hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.install::before {
+  content: '\f0ab';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.profile {
+  background-color: #000;
+}
+
+.profile a {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.profile__avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: #808080;
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+.profile__name {
+  color: #fff;
+}
+
 /* Main */
 main {
   width: calc(100% - 300px);
   height: calc(100vh - 100px);
   padding-top: 100px;
   overflow-y: auto;
+  background-color: #141922;
 }
 
 /* Footer */
@@ -128,6 +203,7 @@ footer {
   z-index: 999;
   width: 100%;
   height: 100px;
+  background-color: #282828;
 }
 
 /* Responsive */
