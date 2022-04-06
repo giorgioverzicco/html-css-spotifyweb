@@ -16,10 +16,6 @@ body {
   min-height: 100vh;
 }
 
-aside, header, main, footer {
-  flex-shrink: 0;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -27,6 +23,29 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 40px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-action {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  font-size: 1.6rem;
+}
+
+.btn--upgrade {
+  text-transform: uppercase;
 }
 
 /* Header */
@@ -215,23 +234,91 @@ footer {
   width: 100%;
   height: 100px;
   background-color: #282828;
-}
-
-/* Buttons */
-.btn {
-  padding: 12px 40px;
-  border: 1px solid #fff;
-  border-radius: 30px;
-  background-color: transparent;
   color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-right: 10px;
-  cursor: pointer;
+  padding: 20px 10px;
 }
 
-.btn--upgrade {
-  text-transform: uppercase;
+.row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-left, .col-right {
+  height: 100%;
+  width: 25%;
+}
+
+.col-center {
+  height: 100%;
+  width: 50%;
+}
+
+footer .album {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+footer .album-img {
+  max-width: 25%;
+  max-height: 100%;
+}
+
+footer .album-info__artist,
+footer .album .like,
+footer .album .add-playlist {
+  color: #808080;
+}
+
+footer .album .like,
+footer .album .add-playlist {
+  font-size: 1.3rem;
+}
+
+footer .album .like {
+  margin-left: 40px;
+}
+
+.action-btn-row {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.play {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 2.2rem;
+}
+
+.duration-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 40px;
+}
+
+.actual-time, .max-time {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.play-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #808080;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.play-bar__progress {
+  width: 20%;
+  height: 100%;
+  background-color: #C1C1C1;
+  border-radius: 5px;
 }
 
 /* Responsive */
