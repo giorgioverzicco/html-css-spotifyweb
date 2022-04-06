@@ -36,8 +36,15 @@ header {
   left: 300px;
   z-index: 998;
   width: calc(100% - 300px);
-  height: 80px;
+  height: 100px;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.upgrade {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
 }
 
 /* Aside */
@@ -155,7 +162,7 @@ aside {
   margin-bottom: 10px;
 }
 
-.install::before {
+.install__link::before {
   content: '\f0ab';
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
@@ -190,7 +197,7 @@ aside {
 main {
   width: calc(100% - 300px);
   height: calc(100vh - 100px);
-  padding-top: 100px;
+  padding-top: 110px;
   overflow-y: auto;
   background-color: #141922;
 }
@@ -204,6 +211,23 @@ footer {
   width: 100%;
   height: 100px;
   background-color: #282828;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 40px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btn--upgrade {
+  text-transform: uppercase;
 }
 
 /* Responsive */
