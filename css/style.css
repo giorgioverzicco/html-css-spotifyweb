@@ -10,10 +10,89 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+/* Debug */
+.debug .container {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.debug aside {
+  background-color: green;
+}
+
+.debug header {
+  background-color: burlywood;
+  filter: opacity(0.75);
+}
+
+.debug main {
+  background-color: blue;
+}
+
+.debug footer {
+  background-color: purple;
+}
+
+/* Commons */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+aside, header, main, footer {
+  flex-shrink: 0;
+}
+
 /* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 200px;
+  z-index: 998;
+  width: calc(100% - 200px);
+  height: 80px;
+}
 
 /* Aside */
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: calc(100vh - 100px);
+}
 
 /* Main */
+main {
+  width: calc(100% - 200px);
+  height: calc(100vh - 100px);
+  padding-top: 100px;
+  overflow-y: auto;
+}
 
 /* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100px;
+}
+
+/* Responsive */
+/* Breakpoints: 1100px, 700px, 600px */
+
+/* Small */
+@media screen and (max-width: 600px) {
+  aside {
+    width: 50px;
+  }
+
+  main {
+    width: calc(100% - 50px);
+  }
+
+  header {
+    left: 50px;
+    width: calc(100% - 50px);
+  }
+}
