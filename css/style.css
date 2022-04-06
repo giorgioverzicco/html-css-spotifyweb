@@ -66,9 +66,15 @@ aside {
   margin-bottom: 20px;
 }
 
-.logo img {
+.logo-img-big {
   max-width: 180px;
   max-height: 100%;
+}
+
+.logo-img-small {
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
 }
 
 .main-nav__menu {
@@ -85,29 +91,20 @@ aside {
 }
 
 .main-nav__item-link {
+  display: flex;
+  align-items: center;
   padding-left: 20px;
   padding-right: 20px;
   color: inherit;
 }
 
-.main-nav__item-link.home::before,
-.main-nav__item-link.search::before,
-.main-nav__item-link.library::before {
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-  margin-right: 10px;
+.main-nav__item-link img {
+  max-width: 30px;
+  max-height: 30px;
 }
 
-.main-nav__item-link.home::before {
-  content: '\f015';
-}
-
-.main-nav__item-link.search::before {
-  content: '\f002';
-}
-
-.main-nav__item-link.library::before {
-  content: '\f080';
+.main-nav__item-link span {
+  margin-left: 10px;
 }
 
 .side-bar__playlist {
@@ -162,19 +159,25 @@ aside {
   margin-bottom: 10px;
 }
 
-.install__link::before {
-  content: '\f0ab';
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-  margin-right: 10px;
-  vertical-align: middle;
+.install__link {
+  display: flex;
+  align-items: center;
+}
+
+.install__link img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.install__link span {
+  margin-left: 10px;
 }
 
 .profile {
   background-color: #000;
 }
 
-.profile a {
+.profile__link {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -237,6 +240,27 @@ footer {
 @media screen and (max-width: 600px) {
   aside {
     width: 50px;
+  }
+
+  .logo, .main-nav__item-link {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .logo-img-big {
+    display: none;
+  }
+
+  .logo-img-small {
+    display: block;
+  }
+
+  .main-nav__item, .main-nav__item.selected {
+    border: 0;
+  }
+
+  .main-nav__item-link {
+    display: none;
   }
 
   main {

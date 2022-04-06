@@ -21,13 +21,29 @@
     <div class="container">
       <aside>
         <div class="logo">
-          <img src="img/logo.svg" alt="">
+          <img class="logo-img-big" src="img/logo.svg" alt="">
+          <img class="logo-img-small" src="img/logo-small.svg" alt="">
         </div>
         <nav class="main-nav">
           <ul class="main-nav__menu">
-            <li class="main-nav__item selected"><a href="#" class="main-nav__item-link home">Home</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__item-link search">Cerca</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__item-link library">La tua libreria</a></li>
+            <li class="main-nav__item selected">
+              <a href="#" class="main-nav__item-link">
+                <img src="img/home.svg" alt="">
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__item-link">
+                <img src="img/search.svg" alt="">
+                <span>Cerca</span>
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__item-link">
+                <img src="img/libreria.svg" alt="">
+                <span>La tua libreria</span>
+              </a>
+            </li>
           </ul>
         </nav>
         <div class="side-bar__playlist">
@@ -75,11 +91,14 @@
         </div>
         <div class="side-bar__bottom">
           <div class="install">
-            <a href="#" class="install__link">Installa app</a>
+            <a href="#" class="install__link">
+              <img src="img/download.svg" alt="">
+              <span>Installa app</span>
+            </a>
           </div>
           <hr>
           <div class="profile">
-            <a href="#">
+            <a class="profile__link" href="#">
               <div class="profile__avatar">
                 <img src="img/profile.svg" alt="">
               </div>
