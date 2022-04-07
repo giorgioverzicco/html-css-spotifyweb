@@ -78,37 +78,37 @@ body {
   color: inherit;
 }
 
-.recently-played {
+.recently-played, .suggestions {
   display: flex;
   flex-direction: column;
   padding: 0 30px;
+  margin-bottom: 30px;
 }
 
-.recently-played__title {
+.recently-played__title, .suggestions__title {
   font-size: 1.75rem;
   font-weight: 600;
   color: #fff;
   margin-bottom: 30px;
 }
 
-.recently-played__list {
+.recently-played__list, .suggestions__list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   text-align: center;
   column-gap: 20px;
 }
 
-.recently-played__item {
+.recently-played__item, .suggestions__item {
   width: calc(100% / 6 - 20px);
 }
 
-.recently-played__album-img {
+.recently-played__album-img, .suggestions__album-img {
   width: 100%;
   height: 100%;
 }
 
-.recently-played__item-title {
+.recently-played__item-title, .suggestions__item-title {
   font-size: 1.125rem;
   font-weight: 600;
   color: #fff;
@@ -120,6 +120,17 @@ body {
   font-weight: 500;
   color: #73757A;
   margin-bottom: 10px;
+}
+
+.suggestions__title {
+  margin-bottom: 5px;
+}
+
+.suggestions__text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #73757A;
+  margin-bottom: 30px;
 }
 
 /* Side Bar */
@@ -482,13 +493,13 @@ body {
 
 /* Responsive */
 @media screen and (max-width: 1100px) {
-  .recently-played__item {
+  .recently-played__item, .suggestions__item {
     width: calc(100% / 4 - 20px);
   }
 }
 
 @media screen and (max-width: 700px) {
-  .recently-played__item {
+  .recently-played__item, .suggestions__item {
     width: calc(100% / 3 - 20px);
   }
 }
@@ -502,7 +513,7 @@ body {
     width: calc(100% - 60px);
   }
 
-  .recently-played__item {
+  .recently-played__item, .suggestions__item {
     width: calc(100% / 2 - 20px);
   }
 
