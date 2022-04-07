@@ -78,6 +78,50 @@ body {
   color: inherit;
 }
 
+.recently-played {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
+.recently-played__title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.recently-played__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  text-align: center;
+  column-gap: 20px;
+}
+
+.recently-played__item {
+  width: calc(100% / 6 - 20px);
+}
+
+.recently-played__album-img {
+  width: 100%;
+  height: 100%;
+}
+
+.recently-played__item-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 10px 0 5px;
+}
+
+.recently-played__item-artist {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #73757A;
+  margin-bottom: 10px;
+}
+
 /* Side Bar */
 .side-bar {
   display: flex;
@@ -437,6 +481,18 @@ body {
 }
 
 /* Responsive */
+@media screen and (max-width: 1100px) {
+  .recently-played__item {
+    width: calc(100% / 4 - 20px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .recently-played__item {
+    width: calc(100% / 3 - 20px);
+  }
+}
+
 @media screen and (max-width: 600px) {
   .app-top {
     width: calc(100% - 60px);
@@ -444,6 +500,10 @@ body {
 
   .app-main__content {
     width: calc(100% - 60px);
+  }
+
+  .recently-played__item {
+    width: calc(100% / 2 - 20px);
   }
 
   .side-bar {
