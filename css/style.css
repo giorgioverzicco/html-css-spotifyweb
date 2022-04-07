@@ -32,9 +32,50 @@ body {
 
 .app-main__content {
   width: calc(100% - 300px);
-  padding-top: 100px;
+  padding-top: 110px;
   overflow-y: auto;
   background-color: #141922;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav__menu {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  list-style-type: none;
+  column-gap: 30px;
+  padding: 0 30px;
+}
+
+.main-nav__item {
+  color: #73757A;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.main-nav__item--selected::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 3px;
+  background-color: #ADFF2F;;
+  border-radius: 2px;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Side Bar */
