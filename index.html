@@ -14,139 +14,186 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap" rel="stylesheet">
     <!-- /google fonts -->
   </head>
-  <body class="debug">
-    <div class="container">
-      <aside>
-        <div class="logo">
-          <img class="logo-img-big" src="img/logo.svg" alt="">
-          <img class="logo-img-small" src="img/logo-small.svg" alt="">
+  <body>
+    <!-- App Top fixed -->
+    <header class="app-top">
+      <button class="btn btn--upgrade">Effettua l'upgrade</button>
+    </header>
+    <!-- /App Top fixed -->
+    <!-- App Main -->
+    <main class="app-main">
+      <!-- Side Bar -->
+      <aside class="side-bar">
+        <!-- Logo -->
+        <div class="side-bar__logo">
+          <img src="img/logo.svg" alt="" class="side-bar__logo-img side-bar__logo-img--big">
+          <img src="img/logo-small.svg" alt="" class="side-bar__logo-img side-bar__logo-img--small">
         </div>
-        <nav class="main-nav">
-          <ul class="main-nav__menu">
-            <li class="main-nav__item selected">
-              <a href="#" class="main-nav__item-link">
-                <img src="img/home.svg" alt="">
-                <span>Home</span>
+        <!-- /Logo -->
+        <!-- Menu -->
+        <nav class="side-bar__menu">
+          <ul class="side-bar__menu-list">
+            <li class="side-bar__list-item side-bar__list-item--selected">
+              <a href="#" class="side-bar__item-link">
+                <svg class="side-bar__item-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path class="side-bar__item-icon-path" d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="#ffffff"/></svg>
+                <span class="side-bar__item-text">Home</span>
               </a>
             </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__item-link">
-                <img src="img/search.svg" alt="">
-                <span>Cerca</span>
+            <li class="side-bar__list-item">
+              <a href="#" class="side-bar__item-link">
+                <svg class="side-bar__item-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path class="side-bar__item-icon-path" d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="#ffffff" fill-rule="evenodd"/></svg>
+                <span class="side-bar__item-text">Cerca</span>
               </a>
             </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__item-link">
-                <img src="img/libreria.svg" alt="">
-                <span>La tua libreria</span>
+            <li class="side-bar__list-item">
+              <a href="#" class="side-bar__item-link">
+                <svg class="side-bar__item-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path class="side-bar__item-icon-path" d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z" fill="#ffffff"/></svg>
+                <span class="side-bar__item-text">La tua libreria</span>
               </a>
             </li>
           </ul>
         </nav>
-        <div class="side-bar__playlist">
-          <div class="side-bar__playlist-header">
-            <h3 class="side-bar__playlist-title">Playlist</h3>
-            <a href="#" class="side-bar__playlist-link">Crea Playlist</a>
-          </div>
-          <div class="side-bar__playlist-body">
-            <ul class="side-bar__playlist-list">
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-              <li class="side-bar__playlist-item">
-                <a href="#" class="side-bar__playlist-item-link">Nome Playlist</a>
-              </li>
-            </ul>
-          </div>
+        <!-- /Menu -->
+        <!-- Create a Playlist -->
+        <div class="side-bar__create-playlist">
+          <h3 class="side-bar__create-playlist-title">Playlist</h3>
+          <a href="#" class="side-bar__create-playlist-link">
+            <i class="side-bar__create-playlist-icon fa-solid fa-square-plus"></i>
+            <span class="side-bar__create-playlist-text">Crea playlist</span>
+          </a>
         </div>
-        <div class="side-bar__bottom">
-          <div class="install">
-            <a href="#" class="install__link">
-              <img src="img/download.svg" alt="">
-              <span>Installa app</span>
+        <!-- /Create a Playlist -->
+        <!-- List of all playlists -->
+        <div class="side-bar__playlists">
+          <ul class="side-bar__playlists-list">
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+            <li class="side-bar__list-item"><a href="#" class="side-bar__item-link">Playlist</a></li>
+          </ul>
+        </div>
+        <!-- /List of all playlists -->
+        <!-- Info box -->
+        <div class="side-bar__info">
+          <!-- Install link -->
+          <div class="side-bar__install">
+            <a href="#" class="side-bar__install-link">
+              <i class="side-bar__install-icon fa-regular fa-circle-down"></i>
+              <h4 class="side-bar__install-name">Installa app</h4>
             </a>
           </div>
+          <!-- /Install link -->
           <hr>
-          <div class="profile">
-            <a class="profile__link" href="#">
-              <div class="profile__avatar">
-                <img src="img/profile.svg" alt="">
-              </div>
-              <div class="profile__name">
-                <span class="profile__name-text">Nome Cognome</span>
-              </div>
+          <!-- Profile link -->
+          <div class="side-bar__profile">
+            <a href="#" class="side-bar__profile-link">
+              <i class="side-bar__profile-icon fa-solid fa-user"></i>
+              <h4 class="side-bar__profile-name">Giorgio Verzicco</h4>
+            </a>
+          </div>
+          <!-- /Profile link -->
+        </div>
+        <!-- /Info box -->
+      </aside>
+      <!-- /Side Bar -->
+      <!-- App Content -->
+      <div class="app-main__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eos rerum fuga quod quos nobis ducimus velit autem eaque dolorem. Temporibus consequuntur rerum tenetur eum libero tempore et, eius repellendus!
+        Dignissimos voluptates delectus aspernatur esse odit, nobis quia rerum facere dolor eum quos harum officiis ipsum quam officia facilis numquam minima, iure optio placeat consectetur voluptate cupiditate nemo? Inventore, placeat!
+        Vero itaque eum explicabo, odit ut eaque eveniet aperiam consequuntur. Rerum ea placeat quasi nulla, impedit voluptates libero temporibus. Quia sunt explicabo fuga amet eius, voluptas minima aperiam non vero?
+        Beatae saepe dicta nam dignissimos iusto ut ad illum doloremque qui fugiat architecto quod praesentium blanditiis quam amet consequuntur dolore distinctio quibusdam iure aliquam similique aspernatur, ipsam et? Placeat, necessitatibus.
+        Exercitationem ullam officia sapiente? Nisi nam tenetur a aliquid unde harum expedita nobis sequi incidunt cupiditate aut quam eligendi, fuga temporibus doloribus. Distinctio accusamus laborum saepe excepturi consequatur officiis impedit?
+        Nihil quam accusamus quisquam voluptas. Molestias accusamus laboriosam expedita? Velit, cum ut inventore libero recusandae qui magnam illo ad veniam est unde natus quaerat quo consectetur laudantium ipsa beatae voluptate.
+        Dolores iure iste officiis deserunt provident suscipit sed ipsa recusandae molestias, minima, natus aperiam. Inventore voluptas est, fuga nostrum rerum voluptatem tenetur modi in dignissimos? Expedita nam cum repellendus voluptate.
+        Distinctio nam sapiente expedita dolores perspiciatis recusandae quasi error nihil porro commodi ab ut, accusamus asperiores sed minus, optio repellendus aspernatur, cupiditate eos! Beatae cumque impedit ipsam modi vitae facilis.
+        Corrupti quibusdam, doloremque aliquam nihil enim repellat soluta alias optio quas quo neque ut ad animi, exercitationem architecto? Qui quis aliquid quaerat eaque temporibus expedita, nesciunt libero nihil vero fugiat!
+        Ratione dolorum optio a amet temporibus nobis vitae, officia aut praesentium fugit aliquid doloribus incidunt, distinctio laboriosam saepe error? Eveniet, dolorum culpa consequatur soluta aliquam natus architecto. Earum, reprehenderit fuga!
+      </div>
+      <!-- /App Content -->
+    </main>
+    <!-- /App Main -->
+    <!-- App Bottom -->
+    <footer class="app-bottom">
+      <!-- Music Player -->
+      <div class="app-bottom__music-player">
+        <!-- Music Player Left Part -->
+        <div class="music-player__container music-player__container--left">
+          <div class="music-player__cover">
+            <img src="img/sinister.jpeg" alt="" class="music-player__cover-img">
+          </div>
+          <div class="music-player__info">
+            <h3 class="music-player__title">Sinister</h3>
+            <h4 class="music-player__artist">Nome Artista</h4>
+          </div>
+          <div class="music-player__actions">
+            <a href="#" class="music-player__actions-like">
+              <i class="fa-regular fa-heart"></i>
+            </a>
+            <a href="#" class="music-player__actions-save">
+              <i class="fa-regular fa-folder"></i>
             </a>
           </div>
         </div>
-      </aside>
-      <header>
-        <div class="upgrade">
-          <button class="btn btn--upgrade">Effettua l'upgrade</button>
+        <!-- /Music Player Left Part -->
+        <!-- Music Player Central Part -->
+        <div class="music-player__container music-player__container--center">
+          <div class="music-player__controls">
+            <a href="#" class="music-player__controls-shuffle">
+              <i class="fa-solid fa-shuffle"></i>
+            </a>
+            <a href="#" class="music-player__controls-prev">
+              <i class="fa-solid fa-step-backward"></i>
+            </a>
+            <a href="#" class="music-player__controls-play">
+              <i class="fa-regular fa-circle-play"></i>
+            </a>
+            <a href="#" class="music-player__controls-next">
+              <i class="fa-solid fa-step-forward"></i>
+            </a>
+            <a href="#" class="music-player__controls-restart">
+              <i class="fa-solid fa-arrow-rotate-right"></i>
+            </a>
+          </div>
+          <div class="music-player__track-duration">
+            <span class="track-duration__current">0:35</span>
+            <div class="track-duration__track-progress-bar">
+              <div class="track-progress-bar__fill"></div>
+            </div>
+            <span class="track-duration__total">4:35</span>
+          </div>
         </div>
-      </header>
-      <main></main>
-      <footer>
-        <div class="row">
-          <div class="col-left">
-            <div class="album">
-              <img class="album-img" src="img/sinister.jpeg" alt="">
-              <div class="album-info">
-                <h3 class="album-info__title">Sinister</h3>
-                <p class="album-info__artist">Brano Nome</p>
-              </div>
-              <div class="like"><i class="fa-regular fa-heart"></i></div>
-              <div class="add-playlist"><i class="fa-regular fa-folder"></i></i></div>
+        <!-- /Music Player Central Part -->
+        <!-- Music Player Right Part -->
+        <div class="music-player__container music-player__container--right">
+          <div class="music-player__additional-controls">
+            <a href="#" class="music-player__controls-playlist">
+              <i class="fa-solid fa-list"></i>
+            </a>
+            <a href="#" class="music-player__controls-device">
+              <i class="fa-solid fa-display"></i>
+            </a>
+            <a href="#" class="music-player__controls-volume">
+              <i class="fa-solid fa-volume-high"></i>
+            </a>
+            <div class="music-player__volume-progress-bar">
+              <div class="volume-progress-bar__fill"></div>
             </div>
           </div>
-          <div class="col-center">
-            <div class="action-btn-row">
-              <button class="btn btn-action shuffle"><i class="fa-solid fa-shuffle"></i></button>
-              <button class="btn btn-action backward"><i class="fa-solid fa-backward-step"></i></button>
-              <button class="btn btn-action play"><i class="fa-regular fa-circle-play"></i></button>
-              <button class="btn btn-action forward"><i class="fa-solid fa-forward-step"></i></button>
-              <button class="btn btn-action restart"><i class="fa-solid fa-arrow-rotate-right"></i></button>
-            </div>
-            <div class="duration-row">
-              <span class="actual-time">0:25</span>
-              <div class="play-bar">
-                <div class="play-bar__progress"></div>
-              </div>
-              <span class="max-time">4:35</span>
-            </div>
-          </div>
-          <div class="col-right"></div>
         </div>
-      </footer>
-    </div>
+        <!-- /Music Player Right Part -->
+      </div>
+      <!-- /Music Player -->
+    </footer>
+    <!-- /App Bottom -->
   </body>
 </html>
