@@ -7,7 +7,7 @@
 
 /* Typo */
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 /* App Top */
@@ -53,7 +53,7 @@ body {
 }
 
 .main-nav__item {
-  color: #73757A;
+  color: #73757a;
   font-size: 1.125rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -62,14 +62,14 @@ body {
 }
 
 .main-nav__item--selected::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -3px;
   left: 50%;
   transform: translateX(-50%);
   width: 40%;
   height: 3px;
-  background-color: #ADFF2F;;
+  background-color: #adff2f;
   border-radius: 2px;
 }
 
@@ -78,46 +78,62 @@ body {
   color: inherit;
 }
 
-.recently-played, .suggestions, .popular-artists {
+.recently-played,
+.suggestions,
+.popular-artists {
   display: flex;
   flex-direction: column;
   padding: 0 30px;
   margin-bottom: 30px;
 }
 
-.recently-played__title, .suggestions__title, .popular-artists__title {
+.recently-played__title,
+.suggestions__title,
+.popular-artists__title {
   font-size: 1.75rem;
   font-weight: 600;
   color: #fff;
   margin-bottom: 30px;
 }
 
-.recently-played__list, .suggestions__list, .popular-artists__list {
+.recently-played__list,
+.suggestions__list,
+.popular-artists__list {
   display: flex;
   flex-flow: row wrap;
   text-align: center;
   column-gap: 20px;
 }
 
-.recently-played__item, .suggestions__item, .popular-artists__item {
+.recently-played__item,
+.suggestions__item,
+.popular-artists__item {
   width: calc(100% / 6 - 20px);
 }
 
-.recently-played__item-album {
+.recently-played__item-album,
+.suggestions__item-album,
+.popular-artists__item-album {
   position: relative;
   cursor: pointer;
 }
 
-.recently-played__item-album .recently-played__album-play {
+.recently-played__item-album .recently-played__album-play,
+.suggestions__item-album .suggestions__album-play,
+.popular-artists__item-album .popular-artists__album-play {
   display: none;
 }
 
-.recently-played__album-img, .suggestions__album-img, .popular-artists__album-img {
+.recently-played__album-img,
+.suggestions__album-img,
+.popular-artists__album-img {
   width: 100%;
   height: 100%;
 }
 
-.recently-played__item-title, .suggestions__item-title, .popular-artists__item-title {
+.recently-played__item-title,
+.suggestions__item-title,
+.popular-artists__item-title {
   font-size: 1.125rem;
   font-weight: 600;
   color: #fff;
@@ -127,18 +143,20 @@ body {
 .recently-played__item-artist {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #73757A;
+  color: #73757a;
   margin-bottom: 10px;
 }
 
-.suggestions__title, .popular-artists__title {
+.suggestions__title,
+.popular-artists__title {
   margin-bottom: 5px;
 }
 
-.suggestions__text, .popular-artists__text {
+.suggestions__text,
+.popular-artists__text {
   font-size: 1rem;
   font-weight: 500;
-  color: #73757A;
+  color: #73757a;
   margin-bottom: 30px;
 }
 
@@ -191,11 +209,11 @@ body {
 }
 
 .side-bar__menu .side-bar__list-item--selected::before {
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 0;
   left: -20px;
-  background-color: #ADFF2F;
+  background-color: #adff2f;
   width: 3px;
   height: 100%;
 }
@@ -441,7 +459,8 @@ body {
   height: 100%;
 }
 
-.track-duration__current, .track-duration__total {
+.track-duration__current,
+.track-duration__total {
   font-size: 0.875rem;
   font-weight: 500;
   color: #fff;
@@ -500,7 +519,7 @@ body {
 }
 
 .btn--upgrade {
-  background-color: #0A0C11;
+  background-color: #0a0c11;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 30px;
@@ -525,12 +544,14 @@ a:hover {
   cursor: pointer;
 }
 
-.track-progress-bar__fill:hover, .volume-progress-bar__fill:hover {
-  background-color: #ADFF2F;
+.track-progress-bar__fill:hover,
+.volume-progress-bar__fill:hover {
+  background-color: #adff2f;
 }
 
-.track-progress-bar__fill:hover::before, .volume-progress-bar__fill:hover::before {
-  content: ' ';
+.track-progress-bar__fill:hover::before,
+.volume-progress-bar__fill:hover::before {
+  content: " ";
   position: absolute;
   top: 50%;
   right: 0;
@@ -545,17 +566,25 @@ a:hover {
   transform: scale(1.1);
 }
 
-.recently-played__item-album:hover::after {
-  content: ' ';
+.recently-played__item-album:hover::after,
+.suggestions__item-album:hover::after,
+.popular-artists__item-album:hover::after {
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.recently-played__item-album:hover .recently-played__album-play {
+.popular-artists__item-album:hover::after {
+  border-radius: 50%;
+}
+
+.recently-played__item-album:hover .recently-played__album-play,
+.suggestions__item-album:hover .suggestions__album-play,
+.popular-artists__item-album:hover .popular-artists__album-play {
   display: block;
   position: absolute;
   top: 50%;
@@ -568,13 +597,17 @@ a:hover {
 
 /* Responsive */
 @media screen and (max-width: 1100px) {
-  .recently-played__item, .suggestions__item, .popular-artists__item {
+  .recently-played__item,
+  .suggestions__item,
+  .popular-artists__item {
     width: calc(100% / 4 - 20px);
   }
 }
 
 @media screen and (max-width: 700px) {
-  .recently-played__item, .suggestions__item, .popular-artists__item {
+  .recently-played__item,
+  .suggestions__item,
+  .popular-artists__item {
     width: calc(100% / 3 - 20px);
   }
 }
@@ -588,7 +621,9 @@ a:hover {
     width: calc(100% - 60px);
   }
 
-  .recently-played__item, .suggestions__item, .popular-artists__item {
+  .recently-played__item,
+  .suggestions__item,
+  .popular-artists__item {
     width: calc(100% / 2 - 20px);
   }
 
@@ -682,7 +717,8 @@ a:hover {
     column-gap: 5px;
   }
 
-  .track-duration__current, .track-duration__total {
+  .track-duration__current,
+  .track-duration__total {
     font-size: 0.75rem;
   }
 
