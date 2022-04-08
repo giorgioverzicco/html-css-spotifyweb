@@ -118,12 +118,6 @@ body {
   cursor: pointer;
 }
 
-.recently-played__item-album .recently-played__album-play,
-.suggestions__item-album .suggestions__album-play,
-.popular-artists__item-album .popular-artists__album-play {
-  display: none;
-}
-
 .recently-played__album-img,
 .suggestions__album-img,
 .popular-artists__album-img {
@@ -569,7 +563,14 @@ a:hover {
 .recently-played__item-album:hover::after,
 .suggestions__item-album:hover::after,
 .popular-artists__item-album:hover::after {
-  content: " ";
+  content: "\f144";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  font-size: 5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -580,19 +581,6 @@ a:hover {
 
 .popular-artists__item-album:hover::after {
   border-radius: 50%;
-}
-
-.recently-played__item-album:hover .recently-played__album-play,
-.suggestions__item-album:hover .suggestions__album-play,
-.popular-artists__item-album:hover .popular-artists__album-play {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-  font-size: 5rem;
-  color: #fff;
 }
 
 /* Responsive */
